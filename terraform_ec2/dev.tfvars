@@ -1,5 +1,5 @@
 region        = "us-east-1"
-ami           = "ami-0149b2da6ceec4bb0"
+ami           = "ami-007020fd9c84e18c7"
 instance_type = "t2.micro"
 instance_name = "terraform_ec2"
-vpc_id        = "vpc-011749449c0b2eb90"
+vpc_id        = "vpc-0d0c3b94e03165cc0"
