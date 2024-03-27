@@ -2,7 +2,6 @@
 resource "aws_instance" "ec2_example"{
   ami                      = var.ami
   instance_type            = var.instance_type
-  key_name = "redash"
   security_groups = [aws_security_group.sg_by_terraform.name]
   tags = {
     Name = local.instance_name
