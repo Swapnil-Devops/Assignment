@@ -57,8 +57,8 @@ jobs:
       - name: Terraform Plan
         id: plan
         # if: github.event_name == 'push'
-        run: terraform plan --var-files="dev.tfvars"
+        run: terraform plan --var-file="dev.tfvars"
 
       - name: Terraform Apply
         # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve --var-files="dev.tfvars"
+        run: terraform apply -auto-approve --var-file="dev.tfvars"
