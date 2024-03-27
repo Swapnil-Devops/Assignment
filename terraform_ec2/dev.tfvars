@@ -1,4 +1,4 @@
-region        = "us-east-1"
+region        = "ap-south-1"
 ami           = "ami-007020fd9c84e18c7"
 instance_type = "t2.micro"
 instance_name = "terraform_ec2"
