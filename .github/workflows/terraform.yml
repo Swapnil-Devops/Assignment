@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Request Manual Approval
-        uses: trstringer/manual-approval@main
+        uses: trstringer/manual-approval@v1.9.1
         with:
           secret: ${{ secrets.GITHUB_TOKEN }}  # Use the correct syntax for the token
           approvers: Swapnil-Devops
