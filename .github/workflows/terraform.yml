@@ -1,0 +1,26 @@
+name: Test Custom Action
+
+on:
+  workflow_dispatch:  # This allows manual triggering
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Request Manual Approval
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}  # Use the correct syntax for the token
+          approvers: Swapnil-Devops
+          minimum-approvals: 1
+          issue-title: "Deploying v1.3.5 to prod from staging"
+          issue-body: "Please approve or deny the deployment"
+          exclude-workflow-initiator-as-approver: false
+
